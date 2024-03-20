@@ -13,7 +13,8 @@ A fim de atendermos esse requisito de insight, utilizamos três principais abord
 - **2. Determinística Categórica**: Ao invés de acertarmos o preço na vírgula, analisamos o preço em função do tempo e tentamos prever se a maior tendência é de alta, queda ou preço mantido para o futuro;
 	- Neste cenário nós utilizamos o algoritmos de árvore categórico e classificamos a saída da regressão polinomial para se encaixar no modelo categórico, portanto, mesmo que essa regressão nos retornasse o número na vírgula, nos baseamos no valor histórico do semestre anterior para categorizar o resultado. Por exemplo, se nosso modelo previu que o preço unitário será de R$2,00 no segundo semestre de 2023 e o preço histórico desse produto era de R$1,99 no primeiro semestre de 2023, nós categorizávamos o resultado como `alta`;
 
-![[processo_linha_de_tendencia.png]]
+<img src="./processo_linha_de_tendencia.png">
+
 <center>
 <p>
 <i>
@@ -26,7 +27,7 @@ Fluxograma das abordagens listadas nos itens 1 e 2
 - **3. Probabilística Categórica:** A fim de obtermos melhores resultados, prevemos não só a tendência maior mas quais as probabilidades de cada categoria aparecer;
 	- A fim de resolver essa ideia probabilística, nós utilizamos a abordagem do algoritmo em árvores, reaproveitando assim a saída da abordagem **2** para obtermos os resultados mais completos. Abaixo segue um fluxograma do processo de transformação do dataset utilizado.
 
-![[Drawing 2024-03-12 17.57.17.excalidraw.png]]
+<img src="./Drawing 2024-03-12 17.57.17.excalidraw.png">
 <center>
 <p>
 <i>
